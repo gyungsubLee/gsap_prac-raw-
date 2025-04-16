@@ -43,14 +43,19 @@ header .gnb .menuBox { width: 98%; position: absolute; left: 50%; transform: tra
 header .gnb .menuBox li { overflow: hidden; }
 header .gnb .menuBox li a { display: block; font-size: 40px; transform: translateY(-100px); transition: all .6s; }
 header .gnb .menuBox.on { top: 10px; transition: all .4s; }
-header .gnb .menuBox.on li a { transform: translateY(0px); }
-
+header .gnb .menuBox.on li a { transform: translateY(0); }
 header .gnb .menuBox.on li:nth-child(2) a { transition-delay: 0.05s; }
 header .gnb .menuBox.on li:nth-child(3) a { transition-delay: 0.1s; }
 header .gnb .menuBox.on li:nth-child(4) a { transition-delay: 0.15s; }
 
+header .gnb .menuBox:not(.on) { transition-delay: 0.25s;}
+header .gnb .menuBox:not(.on) li:nth-child(1) a { transition-delay: 0.05s; }
+header .gnb .menuBox:not(.on) li:nth-child(2) a { transition-delay: 0.1s; }
+header .gnb .menuBox:not(.on) li:nth-child(3) a { transition-delay: 0.15s; }
+header .gnb .menuBox:not(.on) li:nth-child(4) a { transition-delay: 0.2s; }
+
 /* visual */
-.visual {}
+.visual { margin-bottom: 0;}
 .visual .inner {display: grid; height: 100vh; padding: 25px 50px 25px; box-sizing: border-box; grid-template-rows: auto 1fr auto; }
 .visual .inner .mainText { max-width: fit-content; font-weight: normal; font-size: 80px; margin-left: auto; line-height: 0.9; letter-spacing: -2px;}
 .visual .inner .mainText span {display: block; overflow: hidden;}
@@ -61,3 +66,30 @@ header .gnb .menuBox.on li:nth-child(4) a { transition-delay: 0.15s; }
 .visual .inner .logoWrap { display: flex; justify-content: space-between; }
 .visual .inner .logoWrap span { width: 16% }
 .visual .inner .logoWrap span img { width: 100%;}
+
+/* 공통 요소로 스타일 적용 */
+section { margin-bottom: 150px;;
+}
+.inner { padding: 0 50px; box-sizing: border-box; }
+.box { border-radius: 10px; overflow: hidden; }
+.btn { font-size: 11px; padding: 12px 25px; border-radius: 30px; display: inline-block; background-color: #fff; color: #000; text-decoration: uppercase; margin-top: 30px; border: 1px solid transparent}
+.btn:hover { background-color: transparent; color:#fff; border: 1px solid #fff; transition: all .2s; background-color: rgba(55, 55, 55, 0.3); backdrop-filter: blur(10px); }
+
+/* con 1 */
+.con1 .box {  padding: 60px; background-color: rgba(55, 55, 55, 0.3); backdrop-filter: blur(10px); display: grid; grid-template-columns: repeat(2, minmax(0px, 1fr));
+  row-gap: 90px; } 
+
+.con1 .box .mainText { font-size: 30px; grid-row-start: 2; }
+.con1 .box .subText { max-width: 500px; font-size:20px; grid-column-start: 2; }
+.con1 .box .subText p { margin-top: 14px;}
+.con1 .textAni { margin-top: 14px; position: relative; }
+.con1 .textAni:before { content: ''; width: 110px; height: 110px; border-radius: 100%; background: #e36849; position: absolute; right: 0; top: 0;
+  animation: opa linear 1.5s 0s infinite; }
+@keyframes opa {
+  0% {opacity: 0;}
+  30% {opacity: 1;}
+  80% {opacity: 1;}
+  100% {opacity: 0;}
+}
+.con1 .textAni ul { display: grid; max-width: 800px; }
+.con1 .textAni ul li { font-size: 65px; text-transform: uppercase; letter-spacing: -1px; grid-row-start: 1; grid-column-start: 1; transform: translateX(30px); opacity: 0;}
