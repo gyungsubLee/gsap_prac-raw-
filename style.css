@@ -26,7 +26,6 @@ body { font-family: "Releway", sans-serif; font-size: 16px; letter-spacing: -0.0
 .wrap { position: relative; margin: 0 auto; background-color: #141212; color: #fff; padding-bottom: 1000px; }
 
 
-
 /* header 설정*/
 header { position: fixed; width: 100%; z-index: 9999;}
 header .inner { padding: 30px 50px 0; }
@@ -54,6 +53,7 @@ header .gnb .menuBox:not(.on) li:nth-child(2) a { transition-delay: 0.1s; }
 header .gnb .menuBox:not(.on) li:nth-child(3) a { transition-delay: 0.15s; }
 header .gnb .menuBox:not(.on) li:nth-child(4) a { transition-delay: 0.2s; }
 
+
 /* visual */
 .visual { margin-bottom: 0;}
 .visual .inner {display: grid; height: 100vh; padding: 25px 50px 25px; box-sizing: border-box; grid-template-rows: auto 1fr auto; }
@@ -67,6 +67,7 @@ header .gnb .menuBox:not(.on) li:nth-child(4) a { transition-delay: 0.2s; }
 .visual .inner .logoWrap span { width: 16% }
 .visual .inner .logoWrap span img { width: 100%;}
 
+
 /* 공통 요소로 스타일 적용 */
 section { margin-bottom: 150px;;
 }
@@ -75,13 +76,15 @@ section { margin-bottom: 150px;;
 .btn { font-size: 11px; padding: 12px 25px; border-radius: 30px; display: inline-block; background-color: #fff; color: #000; text-decoration: uppercase; margin-top: 30px; border: 1px solid transparent}
 .btn:hover { background-color: transparent; color:#fff; border: 1px solid #fff; transition: all .2s; background-color: rgba(55, 55, 55, 0.3); backdrop-filter: blur(10px); }
 
+
 /* content 1 */
 .con1 .box {  padding: 60px; background-color: rgba(55, 55, 55, 0.3); backdrop-filter: blur(10px); display: grid; grid-template-columns: repeat(2, minmax(0px, 1fr));
   row-gap: 90px; } 
-
 .con1 .box .mainText { font-size: 30px; grid-row-start: 2; }
+
 .con1 .box .subText { max-width: 500px; font-size:20px; grid-column-start: 2; }
 .con1 .box .subText p { margin-top: 14px;}
+
 .con1 .textAni { margin-top: 14px; position: relative; }
 .con1 .textAni:before { content: ''; width: 110px; height: 110px; border-radius: 100%; background: #e36849; position: absolute; right: 0; top: 0;
   animation: opa linear 1.5s 0s infinite; }
@@ -94,9 +97,11 @@ section { margin-bottom: 150px;;
 .con1 .textAni ul { display: grid; max-width: 800px; }
 .con1 .textAni ul li { font-size: 65px; text-transform: uppercase; letter-spacing: -1px; grid-row-start: 1; grid-column-start: 1; transform: translateX(30px); opacity: 0;}
 
+
 /* content 2 */
 .con2 .inner { position: relative; padding: 40px 50px; }
 .con2 .inner:before { content:''; width: 95%; height: 1px; background: #3b3b3b; position: absolute; left: 50%; transform: translateX(-50%); top: 0 }
+
 .con2 .mainTextBox { position: relative }
 .con2 .mainTextBox span { position: absolute; right: 0; top: 0; }
 .con2 .mainTextBox .in { display: flex; justify-content: flex-end; margin-bottom: 15px; }
@@ -106,6 +111,7 @@ section { margin-bottom: 150px;;
 .con2 .mainTextBox .title i { display: block;}
 .con2 .mainTextBox .title.a { align-self: flex-end;}
 .con2 .mainTextBox .title.b { margin-right: 400px;}
+
 .con2 .subTextBox { display: flex; justify-content: space-between; align-items: flex-end;}
 .con2 .subTextBox .subText { max-width: 600px; font-size: 22px; }
 .con2 .subTextBox .subText p:nth-child(1) { margin-bottom: 20px; }
@@ -114,3 +120,20 @@ section { margin-bottom: 150px;;
 .con2 .subTextBox .iconbox li:last-child { width: 40px; }
 
 
+/* content 3 */
+.con3 .inner { display: flex; justify-content: space-between; }
+.con3 .textBox { width: 28; }
+.con3 .textBox h4 { font-size: 60px; font-weight: normal; position: -webkit-sticky; position: -webkit-sticky; top: 50%; transform: translateY(-50%);}
+
+/* overflow:hidden 주는 이유는 스크롤 트리거를 작성하게 되면 가로 스크롤이 생겨서 이를 가려주기 위해서 이다. */
+.con3 .listBox { width: 70%; display: flex; justify-content: space-between; flex-wrap: wrap; perspective: 900px; overflow: hidden;}
+.con3 .listBox li { width: 32.2%;}
+.con3 .listBox li .img { background-color: var(--sub-color); border-radius: 10px; text-align: center; padding: 30% 0; }
+.con3 .listBox li .img img { width: 40%; }
+.con3 .listBox li h4 { display: flex; justify-content: space-between; margin: 15px 0 50px; font-weight: normal; }
+.con3 .listBox li h4 span.b { opacity: 0.5;}
+.con3 .listBox li[data-color="a"]{--sub-color: #d1dbfd;}
+.con3 .listBox li[data-color="b"]{--sub-color: #90c3cd;}
+.con3 .listBox li[data-color="c"]{--sub-color: #ff764a;}
+.con3 .listBox li[data-color="d"]{--sub-color: #47b172;}
+.con3 .listBox li[data-color="e"]{--sub-color: #ffb84f;}
