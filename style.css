@@ -164,3 +164,16 @@ section { margin-bottom: 150px;;
 .con4 .subTextBox {display: grid; grid-template-columns: repeat(2, 1fr); }
 .con4 .subTextBox .subText { max-width: 600px; font-size: 22px; grid-column-start: 2; }
 .con4 .subTextBox .subText p:nth-child(1) { margin-bottom: 20px; }
+
+
+/* content 5 */
+.con5 {  background-color: #fff; color: #141212; margin-bottom: 0; } 
+.con5 .inner { padding: 50px; }
+.con5 .inner .mainTextBox h2 { font-size: 100px; letter-spacing: -5px; font-weight: normal; text-transform: uppercase; }
+
+.con5 .listBox { border-top: solid .5px #000; margin-top: 150px; }
+.con5 .listBox li { display: grid; grid-template-columns: 1fr minmax(30%, auto) minmax(20%, auto); padding: 10px 0; border-bottom: solid .5px #000; cursor: pointer;}
+.con5 .listBox li h3 { font-size: 40px; letter-spacing: -1px; font-weight: normal; }
+.con5 .listBox li p { align-self: center;}
+.con5 .imgBox { position: absolute; transform: scale(0); opacity: 0; z-index: 100;}
+
