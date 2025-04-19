@@ -41,6 +41,7 @@ window.onload = function() {
         .fromTo(selector, {overflow: 'hidden', y:150}, {y:0, ease: 'none', duration: 5}, 0)
     })
     
+
     // subText - 애니메이션
     gsap.utils.toArray('.subText p').forEach((selector) => {
         gsap.timeline({
@@ -71,4 +72,17 @@ window.onload = function() {
     textAni.play();
 
 
+    // con4 CardBox - z 축 애니메이션
+    gsap.utils.toArray('.con4 .listBox .cardBox').forEach((selector) => {
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: selector,
+                start: '0% 20%',
+                end: '0% 0%',
+                scrub: 1,
+                markers: true
+            }
+        })
+        .to( selector, { rotateX: -10, scale: 0.9, transformOrigin: 'top', filter: 'brightness(0.3)'}, 0 )
+    })
 }
