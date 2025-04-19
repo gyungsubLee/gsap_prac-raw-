@@ -43,14 +43,13 @@ window.onload = function() {
     
     // subText - 애니메이션
     gsap.utils.toArray('.subText p').forEach((selector) => {
-        console.log(selector)
         gsap.timeline({
             scrollTrigger: {
                 trigger: selector,
                 start: '0% 100%',
                 end: '100% 100%',
                 scrub: 1,
-                markers: true
+                // markers: true
             }
         })
         .fromTo(
@@ -58,5 +57,18 @@ window.onload = function() {
             {overflow: 'hidden', x: 20, opacity: 0},
             {x:0, opacity: 1, ease: 'none', duration: 5},
             0)
+    });
+
+
+    // con1 textAni - 텍스트 체인지 애니메이션
+    const textAniList = document.querySelectorAll('.con1 .textAni li');
+    const textAni = gsap.timeline({repeat: -1}); // 무한 반복
+
+    textAniList.forEach((selector)=> {
+        textAni.to(selector, 0.8, {opacity: 1, repeat: 1, delay: 0, x: 0, yoyo:true, ease: 'power4.out'})
     })
+
+    textAni.play();
+
+
 }
