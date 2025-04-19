@@ -75,7 +75,7 @@ section { margin-bottom: 150px;;
 .box { border-radius: 10px; overflow: hidden; }
 .btn { font-size: 11px; padding: 12px 25px; border-radius: 30px; display: inline-block; background-color: #fff; color: #000; text-transform: uppercase; margin-top: 30px; border: 1px solid transparent}
 .btn:hover { background-color: transparent; color:#fff; border: 1px solid #fff; transition: all .2s; background-color: rgba(55, 55, 55, 0.3); backdrop-filter: blur(10px); }
-
+.subText .p  { display: inline-block; }
 
 /* content 1 */
 .con1 .box {  padding: 60px; background-color: rgba(55, 55, 55, 0.3); backdrop-filter: blur(10px); display: grid; grid-template-columns: repeat(2, minmax(0px, 1fr));
