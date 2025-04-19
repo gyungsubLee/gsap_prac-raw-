@@ -25,5 +25,21 @@ window.onload = function() {
     .to('.logoWrap #u', {x: 50, y: 300, rotate: 10, ease: 'none', duration: 5}, 0)  
     .to('.logoWrap #n', {x: 100, y: 100, rotate: -10, ease: 'none', duration: 5}, 0)  
     .to('.logoWrap #g', {x: 50, y: 450, rotate: -20, ease: 'none', duration: 5}, 0)  
+
+    
+    // con2, con4 - text 애니메이션
+    gsap.utils.toArray('.mainTextBox .title i').forEach((selector) => {
+        console.log(selector)
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: selector,
+                start: '100% 100%',
+                end: '100% 100%',
+                scrub: 1,
+                markers: true,
+            }
+        })
+        .fromTo(selector, {overflow: 'hidden', y:150}, {y:0, ease: 'none', duration: 5}, 0)
+    })
     
 }

@@ -145,6 +145,7 @@ section { margin-bottom: 150px;;
 .con4 .mainTextBox .title { font-size: 120px; line-height: 1; letter-spacing: -5px; overflow: hidden; }
 .con4 .mainTextBox .title.b { text-align: center; }
 .con4 .mainTextBox .title.c { align-self: flex-start; }
+.con4 .mainTextBox .title i { display: block;}
 .con4 .mainTextBox .in { display: flex; justify-content: flex-end; }
 .con4 .mainTextBox .in .box { max-width: 550px; margin-right: 20px; }
 
@@ -205,7 +206,7 @@ footer .box .mainTextBox span { opacity: .5; display: block; }
 
 footer .box .talkBtn { display: grid; place-items: center; flex-grow: 1; }
 footer .box .talkBtn a { display: block; width: 95px; height: 95px; border-radius: 100%; box-shadow: 0 0 0 13px #1c1c1c, 0 0 50px rgba(255, 255, 255, .3); }
-footer .box .talkBtn a span { display: block; width: 95%; height: 95%; margin:2.5% auto; border-radius: 100%; background: #FF764A;  transition: all 0.3s; } 
+footer .box .talkBtn a span { display: block; width: 95%; height: 95%; margin:2.5% auto; border-radius: 100%; background: #FF764A;  transition: all 0.1s; } 
 footer .box .talkBtn a:hover span { width: 100%; height: 100%; margin: 0 auto; }
 
 footer .box .btnBox { display: flex; justify-content: center; flex-direction: row; border-top: 1px solid rgba(255, 255, 255, .2); }
