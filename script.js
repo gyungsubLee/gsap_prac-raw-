@@ -130,7 +130,7 @@ window.onload = function() {
             imgBox.style.top = imgBoxY + 'px';
         })
         
-        listBox[i].addEventListener('mouse', () => {
+        listBox[i].addEventListener('mouseleave', () => {
             gsap.to(imgBox, {scale:0, opacity:0, duration:.3})
         });
     }

@@ -176,7 +176,7 @@ section { margin-bottom: 150px;;
 .con5 .listBox li { display: grid; grid-template-columns: 1fr minmax(30%, auto) minmax(20%, auto); padding: 10px 0; border-bottom: solid .5px #000; cursor: pointer;}
 .con5 .listBox li h3 { font-size: 40px; letter-spacing: -1px; font-weight: normal; }
 .con5 .listBox li p { align-self: center;}
-.con5 .imgBox { position: absolute; transform: scale(0); opacity: 0; z-index: 100;}
+.con5 .imgBox { position: absolute; transform: scale(0); opacity: 0; z-index: 100; transition: all .1s; pointer-events: none;  transition: left 0.03s ease, top 0.03s ease;}
 .wrap.on { overflow: hidden}
 
 .con5 .listBox li:hover h3 { color: var(--sub-text-color); transition: all 0.2s; }
