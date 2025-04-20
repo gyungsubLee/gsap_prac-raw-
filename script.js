@@ -80,9 +80,31 @@ window.onload = function() {
                 start: '0% 20%',
                 end: '0% 0%',
                 scrub: 1,
-                markers: true
+                // markers: true
             }
         })
         .to( selector, { rotateX: -10, scale: 0.9, transformOrigin: 'top', filter: 'brightness(0.3)'}, 0 )
+    })
+
+    // con3 listBox Box 애니메이션
+    gsap.utils.toArray('.con3 .listBox li').forEach((selector, idx) => {
+        ScrollTrigger.create({
+            trigger: selector,
+            start: '20% 80%',
+            onEnter: () => {
+                gsap.set(selector, {
+                    rotationX: '-65deg',
+                    z: '-500px',
+                    opacity: 0
+                }),
+                gsap.to(selector, {
+                    rotationX: 0,
+                    z: 0,
+                    opacity: 1,
+                    delay: idx % 3 * .05
+                })
+            },
+            markers: true
+        })
     })
 }
