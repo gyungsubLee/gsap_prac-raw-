@@ -177,6 +177,15 @@ section { margin-bottom: 150px;;
 .con5 .listBox li h3 { font-size: 40px; letter-spacing: -1px; font-weight: normal; }
 .con5 .listBox li p { align-self: center;}
 .con5 .imgBox { position: absolute; transform: scale(0); opacity: 0; z-index: 100;}
+.wrap.on { overflow: hidden}
+
+.con5 .listBox li:hover h3 { color: var(--sub-text-color); transition: all 0.2s; }
+
+.con5 .listBox li h3[data-color="a"] { --sub-text-color: #3A8DFF; }  
+.con5 .listBox li h3[data-color="b"] { --sub-text-color: #00C2C7; }  
+.con5 .listBox li h3[data-color="c"] { --sub-text-color: #9B7EDC; }  
+.con5 .listBox li h3[data-color="d"] { --sub-text-color: #FF7F50; }  
+.con5 .listBox li h3[data-color="e"] { --sub-text-color: #FFC542; }  
 
 
 /* content 6 */

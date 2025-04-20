@@ -104,7 +104,44 @@ window.onload = function() {
                     delay: idx % 3 * .05
                 })
             },
-            markers: true
+            // markers: true
         })
     })
+
+    // con5 listBox li hover 시 해당하는 이미지 보이는 애니메이션
+    const listBox = document.querySelectorAll('.con5 .listBox li');
+    const imgBox = document.querySelector('.con5 .imgBox');
+    const img = document.querySelector('.con5 .imgBox img');
+
+    for(let i = 0; i < listBox.length; i++) {
+        listBox[i].addEventListener('mouseenter', () => {
+            img.src =`images/img${i}.jpg`;
+
+            gsap.fromTo(imgBox, 
+                {scale: 0, opacity: 0},  
+                {scale: 1, opacity: 1, duration: 0.3}
+            );
+        });
+
+        listBox[i].addEventListener('mousemove', (e) => {
+            let imgBoxX = e.pageX + 20;
+            let imgBoxY = e.pageY - 20;
+            imgBox.style.left = imgBoxX + 'px';
+            imgBox.style.top = imgBoxY + 'px';
+        })
+        
+        listBox[i].addEventListener('mouse', () => {
+            gsap.to(imgBox, {scale:0, opacity:0, duration:.3})
+        });
+    }
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.con5',
+            start: '0% 100%',
+            end: '100% 0%',
+            toggleClass: {targets: '.wrap', className: 'on'}
+        }
+    })
+
 }
