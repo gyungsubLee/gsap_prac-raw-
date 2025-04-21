@@ -144,4 +144,23 @@ window.onload = function() {
         }
     })
 
+    // footer 로고 애니메이션
+   gsap .registerPlugin(ScrollTrigger);
+
+   gsap.timeline({
+       scrollTrigger: {
+           trigger: 'footer',
+           start: '-150px 0%',
+           end: '80% 80%',
+           scrub: 1, 
+           markers: true
+       }
+   })
+   .fromTo('.logoWrap #j', {x: -300, y: 400, rotate: 20, z: -20, scale: 0.8}, {x: -50, y: 150, rotate: 20, scale: 1,ease: 'none', duration: 5}, 0)  
+   .fromTo('.logoWrap #y', {x: -100, y: 200, rotate: -10, z: -20, scale: 0.8}, {x: 20, y: 50, rotate: -10, scale: 1,  ease: 'none', duration: 5}, 0)  
+   .fromTo('.logoWrap #o', {x: 0, y: 400, z: -100,  rotate: 0, scale: 0.8}, {x: 0, y: 500, rotate: 0, scale: 1, ease: 'none', duration: 5}, 0)  
+   .fromTo('.logoWrap #u', {x: 150, y: 250, rotate: 10, z: -20, scale: 0.8}, {x: 50, y: 350, rotate: 10, scale: 1, ease: 'none', duration: 5}, 0)  
+   .fromTo('.logoWrap #n', {x: 300, y: 300, rotate: -10, z: -20, scale: 0.8}, {x: 100, y: 100, rotate: -10, scale: 1, ease: 'none', duration: 5}, 0)  
+
+
 }
