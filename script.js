@@ -123,12 +123,28 @@ window.onload = function() {
             );
         });
 
-        listBox[i].addEventListener('mousemove', (e) => {
-            let imgBoxX = e.pageX + 20;
-            let imgBoxY = e.pageY - 20;
-            imgBox.style.left = imgBoxX + 'px';
-            imgBox.style.top = imgBoxY + 'px';
-        })
+        let mouseX = 0;
+        let mouseY = 0;
+        let currentX = 0;
+        let currentY = 0;
+
+        listBox.forEach(item => {
+            item.addEventListener('mousemove', (e) => {
+                mouseX = e.pageX + 20;
+                mouseY = e.pageY - 230;
+            });
+        });
+
+        // 딜레이 모션
+        gsap.ticker.add(() => {
+            currentX += (mouseX - currentX) * 0.2;  // 0.2는 따라오는 정도 (0.1 ~ 0.3 추천)
+            currentY += (mouseY - currentY) * 0.2;
+            
+            gsap.set(imgBox, {
+                left: currentX,
+                top: currentY
+            });
+        });
         
         listBox[i].addEventListener('mouseleave', () => {
             gsap.to(imgBox, {scale:0, opacity:0, duration:.3})
