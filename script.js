@@ -160,6 +160,23 @@ window.onload = function() {
         }
     })
 
+    // con 5 - 메뉴바 색상 변경
+    const header = document.querySelector('header');
+
+    ScrollTrigger.create({
+        trigger: '.con5',
+        start: 'top top',
+        end: 'bottom top',
+        onEnter: () => header.classList.add('white-section-active'),
+        onLeave: () => header.classList.remove('white-section-active'), 
+        onEnterBack: () => header.classList.add('white-section-active'),
+        onLeaveBack: () => header.classList.remove('white-section-active'),
+        markers: true
+    })
+
+    
+
+
     // footer 로고 애니메이션
     gsap .registerPlugin(ScrollTrigger);
 
@@ -191,4 +208,12 @@ window.onload = function() {
         }
     })
    .fromTo('.box .mainTextBox h2', {y: 500 }, {y: 0, ease:'none', ease: 'none', duration: 5}, 0)
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: 'con6',
+            start: '40% 40%',
+            end: '50% 50%'
+        }
+    })
 }

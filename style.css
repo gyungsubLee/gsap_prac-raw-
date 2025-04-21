@@ -31,7 +31,7 @@ header { position: fixed; width: 100%; z-index: 9999;}
 header .inner { padding: 30px 50px 0; }
 header .inner .logo { width: 150px; display: flex; justify-content: space-between; }
 header .inner .logo span { padding: 0 1px; }
-header .inner .logo span img { width: 100%; }
+header .inner .logo span img { width: 100%;}
 
 header .gnb { text-align: center; }
 header .gnb .menuOpen {font-size:10px; position:absolute; left:50%; transform:translateX(-50%); top: 10px; padding: 30px 0; z-index: 10; cursor: pointer}
@@ -52,6 +52,10 @@ header .gnb .menuBox:not(.on) li:nth-child(1) a { transition-delay: 0.05s; }
 header .gnb .menuBox:not(.on) li:nth-child(2) a { transition-delay: 0.1s; }
 header .gnb .menuBox:not(.on) li:nth-child(3) a { transition-delay: 0.15s; }
 header .gnb .menuBox:not(.on) li:nth-child(4) a { transition-delay: 0.2s; }
+
+header.white-section-active { color: #000;}
+header.white-section-active .logo img {  filter: invert(1); }
+header.white-section-active .gnb .menuOpen:before { background-color: #000 }
 
 
 /* visual */
