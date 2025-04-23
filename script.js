@@ -77,8 +77,8 @@ window.onload = function() {
         gsap.timeline({
             scrollTrigger: {
                 trigger: selector,
-                start: '0% 20%',
-                end: '0% 0%',
+                start: 'top 20%',
+                end: 'top top',
                 scrub: 1,
                 // markers: true
             }
@@ -171,7 +171,7 @@ window.onload = function() {
         onLeave: () => header.classList.remove('white-section-active'), 
         onEnterBack: () => header.classList.add('white-section-active'),
         onLeaveBack: () => header.classList.remove('white-section-active'),
-        markers: true
+        // markers: true
     })
 
     
@@ -216,4 +216,16 @@ window.onload = function() {
             end: '50% 50%'
         }
     })
+
+    // loading
+    const loading = document.querySelector('.loading');
+    const rotate = document.querySelectorAll('.rotate');
+    const opacity = document.querySelectorAll('.opacity');
+    
+    // 특정 함수 실행 지연 시점 설정 (setTimeout)
+    setTimeout(()=>loading.classList.add('scene1'), 0);
+    setTimeout(()=>loading.classList.add('scene2'), 1500);
+    setTimeout(()=>loading.classList.remove('scene1', 'scene2'), 2500);
+    setTimeout(() => {rotate.forEach(el => el.classList.add('on'))}, 2500);
+    setTimeout(() => {opacity.forEach(el => el.classList.add('on'))}, 2500);
 }
